@@ -1,0 +1,8 @@
+import { useRef, useState } from 'react';
+export default function BeforeAfter() {
+  const [value, setValue] = useState(50); const ref = useRef(null);
+  const update = e => setValue(Number(e.target.value));
+  return <section className="bg-[#0a0a09] pb-28 md:pb-36"><div className="mx-auto max-w-[1000px] px-5 md:px-8"><div className="mb-8 flex items-end justify-between"><div><p className="eyebrow text-[#cbb78a]">Before / after</p><h2 className="display mt-3 text-4xl md:text-5xl">The difference is in the surface.</h2></div></div>
+    <div ref={ref} className="relative aspect-[16/10] overflow-hidden bg-[#171715] select-none"><div className="absolute inset-0 grid place-items-center text-center"><div><p className="display text-3xl text-white/20 md:text-5xl">AFTER</p><p className="eyebrow mt-2 text-white/20">Drop your finished studio image here</p></div></div><div className="absolute inset-y-0 left-0 overflow-hidden" style={{width:`${value}%`}}><div className="absolute inset-0 grid min-w-[1000px] place-items-center bg-[#11110f] text-center md:min-w-[1000px]"><div><p className="display text-3xl text-white/25 md:text-5xl">BEFORE</p><p className="eyebrow mt-2 text-white/20">Drop your pre-detail image here</p></div></div></div><div className="absolute inset-y-0" style={{left:`calc(${value}% - 1px)`}}><div className="h-full w-px bg-white/80"/><div className="absolute left-1/2 top-1/2 grid h-10 w-10 -translate-x-1/2 -translate-y-1/2 place-items-center border border-white/50 bg-[#0a0a09]/80 text-[9px] text-white">↔</div></div><input aria-label="Before after comparison" type="range" min="0" max="100" value={value} onChange={update} className="absolute inset-0 h-full w-full cursor-ew-resize opacity-0"/></div>
+  </div></section>;
+}

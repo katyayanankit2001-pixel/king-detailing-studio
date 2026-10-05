@@ -1,0 +1,10 @@
+{
+  "project": "King Detailing Studio",
+  "business_location": "Arrah, Bihar, India",
+  "actual_glb": "king-detailing-studio/public/models/fortuner.glb",
+  "glb_size_bytes": 47965696,
+  "framework": "React + Vite",
+  "backend": "Express",
+  "sheets": "Google Sheets API via server-only integration",
+  "gemini_handoff": "king-detailing-studio/GEMINI_READY.md"
+}
